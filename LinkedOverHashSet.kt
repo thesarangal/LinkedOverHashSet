@@ -40,6 +40,7 @@ package sarangal.packagemanager.utils
  *
  * @author Rajat Sarangal
  * @since January 22, 2022
+ * @link https://github.com/thesarangal/LinkedOverHashSet
  * */
 class LinkedOverHashSet<E> : LinkedHashSet<E>() {
 
