@@ -46,11 +46,14 @@ class LinkedOverHashSet<E> : LinkedHashSet<E>() {
 
     /**
      * Adds the specified element to this set if it is not already present.
+     * If it already exists in set then it will be removed from it's last position
+     * and will be added at the last position of the set.
+     *
      * More formally, adds the specified element <tt>e</tt> to this set if
      * this set contains no element <tt>e2</tt> such that
      * <tt>(e==null&nbsp;?&nbsp;e2==null&nbsp;:&nbsp;e.equals(e2))</tt>.
-     * If this set already contains the element, the call leaves the set
-     * unchanged and returns <tt>false</tt>.
+     * If this set already contains the element, the call remove it from old position,
+     * add at last position of the set and returns <tt>false</tt>.
      *
      * @param element element to be added to this set
      * @return <tt>true</tt> if this set did not already contain the specified
