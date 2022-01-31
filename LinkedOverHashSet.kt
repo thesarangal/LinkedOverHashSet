@@ -1,5 +1,3 @@
-package sarangal.packagemanager.utils
-
 /**
  * Implementation of [LinkedHashSet] class with following property:
  *
