@@ -1,47 +1,55 @@
 # LinkedOverHashSet
-Implementation of [LinkedHashSet] class maintain the order of insertion of element like [LinkedHashSet] but the element will store at the last if it was already exists when requested to re-insert.
 
-## Functions
+LinkedOverHashSet is a Kotlin implementation of the LinkedHashSet class with an added property of
+maintaining the order of insertion of elements. In addition, when an element is re-inserted, it is
+stored at the last position of the set instead of its original position.
 
-### add(element: E): Boolean
-Adds the specified element to this set if it is not already present. If it already exists in set then it will be removed from it's last position and will be added at the last position of the set.
+# Usage
 
-### popLastElement(): E?
-@return Last element as well as remove from set if available, otherwise NULL
+To use LinkedOverHashSet, you can simply create an instance of the LinkedOverHashSet class:
 
-#### For example:
-
-```
+```bash
 val linkedOverHashSet = LinkedOverHashSet<Int>()
-println(linkedOverHashSet.add(4))
-println(linkedOverHashSet.add(3))
-println(linkedOverHashSet.add(1))
-println(linkedOverHashSet.add(2))
-println(linkedOverHashSet.add(3))
-println(linkedOverHashSet.add(1))
-println(linkedOverHashSet.add(4))
-println(linkedOverHashSet.add(2))
-println()
-println("Elements are:")
+```
+
+You can then add elements to the set using the add function:
+
+```bash
+linkedOverHashSet.add(4)
+linkedOverHashSet.add(3)
+linkedOverHashSet.add(1)
+linkedOverHashSet.add(2)
+```
+
+If an element is re-inserted, it will be removed from its original position and added to the last
+position of the set:
+
+```bash
+linkedOverHashSet.add(3) // returns false
+linkedOverHashSet.add(1) // returns false
+linkedOverHashSet.add(4) // returns false
+linkedOverHashSet.add(2) // returns false
+```
+
+You can iterate over the elements in the set using a for loop:
+
+```bash
 for (x in linkedOverHashSet){
-    println(x)
+println(x)
 }
 ```
 
-Output:
-```
-true
-true
-true
-true
-false
-false
-false
-false
+You can also use the popLastElement function to get and remove the last element of the set:
 
-Elements are:
-3
-1
-4
-2
- ```
+```bash
+val lastElement = linkedOverHashSet.popLastElement()
+```
+
+## Contributions
+
+Contributions to the Root Detector library are welcome. If you find a bug or have a feature request,
+please open an issue on the [GitHub repository](https://github.com/thesarangal/LinkedOverHashSet).
+
+## License
+
+The Root Detector library is released under the [MIT License](https://opensource.org/licenses/MIT).

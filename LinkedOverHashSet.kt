@@ -1,3 +1,5 @@
+import java.util.*
+
 /**
  * Implementation of [LinkedHashSet] class with following property:
  *
