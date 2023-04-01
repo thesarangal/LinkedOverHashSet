@@ -4,7 +4,7 @@ LinkedOverHashSet is a Kotlin implementation of the LinkedHashSet class with an 
 maintaining the order of insertion of elements. In addition, when an element is re-inserted, it is
 stored at the last position of the set instead of its original position.
 
-# Usage
+## Usage
 
 To use LinkedOverHashSet, you can simply create an instance of the LinkedOverHashSet class:
 
